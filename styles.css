@@ -1,0 +1,56 @@
+
+
+
+
+:root {
+  --max-width: 980px;
+  --accent: #2b7cff;
+  --muted: #666;
+  --gap: 12px;
+  --card-bg: #ffffff;
+}
+
+* { box-sizing: border-box; }
+body {
+  font-family: Inter, Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #222;
+  background: linear-gradient(180deg,#f6f8fb,#eef4ff);
+  min-height: 100vh;
+}
+header { width: 100%; max-width: var(--max-width); margin-bottom: 18px; }
+h1 { margin: 0 0 8px 0; font-size: 22px; color: var(--accent); }
+.top-nav a {
+  margin-right: 12px; color: var(--accent); text-decoration: none; font-weight:600;
+}
+.app-container { width: 100%; max-width: var(--max-width); background: var(--card-bg); padding: 16px; border-radius: 10px; box-shadow: 0 8px 30px rgba(20,20,40,0.08); border: 1px solid rgba(40,60,120,0.03); }
+
+.breadcrumbs { margin-bottom: 12px; color: var(--muted); font-size: 14px; }
+.search-row { display:flex; gap:8px; margin-bottom: 12px; align-items:center; }
+.search-row input[type="search"] { flex:1; padding:10px 12px; border-radius:10px; border:1px solid #e6eefc; background:#fbfdff;}
+.controls { display:flex; gap:8px; align-items:center; }
+
+.list { display:flex; flex-direction:column; gap:10px; }
+.item { padding:12px; border-radius:10px; border:1px solid #f0f4ff; background:#fbfdff; display:flex; justify-content:space-between; align-items:center; gap:10px; }
+.item .meta { color:var(--muted); font-size:13px; margin-top:6px; }
+.item .actions button, .item .actions a { margin-left:8px; }
+
+.button { padding:8px 12px; border-radius:8px; border:none; cursor:pointer; background:var(--accent); color:white; font-weight:600; }
+.btn-ghost { padding:6px 10px; border-radius:8px; border:1px solid #dfe9ff; background:transparent; color:#2b3b55; cursor:pointer; }
+
+.form-row { display:flex; gap:8px; margin:8px 0; }
+.form-row input, .form-row select { padding:8px 10px; border-radius:8px; border:1px solid #e6eefc; }
+
+.small { font-size:13px; color:var(--muted); }
+
+.footer-note { margin-top:18px; color:var(--muted); font-size:13px; }
+
+@media (max-width:720px) {
+  body { padding:12px; }
+  .form-row { flex-direction:column; }
+  .search-row { flex-direction:column; align-items:stretch; }
+}
